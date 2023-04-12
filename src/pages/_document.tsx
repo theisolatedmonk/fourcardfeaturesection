@@ -13,7 +13,7 @@ export default function Document() {
         ></link>
       </Head>
       <body>
-        hello world!
+        
         <Main />
         <NextScript />
       </body>
