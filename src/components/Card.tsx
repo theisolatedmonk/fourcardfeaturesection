@@ -17,26 +17,34 @@ interface Cardtype {
 export function Card(props: Cardtype) {
   return (
     <div
-      style={{borderTopColor: props.borderColor}}
-      className="p-4 flex flex-col border border-t-2 gap-4 shadow-gray-400 shadow-md w-52 h-40 rounded-md"
+      style={{ borderTopColor: props.borderColor }}
+      className="p-4 flex flex-col border border-t-2 gap-4 shadow-gray-400 shadow-md w-[280px] h-44 rounded-md "
     >
-      <div className=" items-start bg-white flex flex-col">
-        <p className="font-poppins text-[hsl(234,12%,34%)]">{props.heading}</p>
-        <p className="text-xs">{props.discription}</p>
+      <div className=" items-start bg-white flex flex-col ">
+        <p className="font-poppins font-bold text-[hsl(234,12%,34%)]">
+          {props.heading}
+        </p>
+        <p className="text-xs text-[hsl(229,6%,66%)]">{props.discription}</p>
       </div>
-      <div className="flex justify-end bg-black">{props.svgImage}</div>
+      <div className=" w-full flex justify-end">
+        <div className="flex justify-end max-w-[80px] h-auto ">
+          {props.svgImage}
+        </div>
+      </div>
     </div>
   );
 }
 
-
-
 export function TopComponent() {
   return (
     <div className="flex flex-col items-center justify-center text-center w-80 gap-2">
-      <div className="text-xl">Reliable, efficient delivery</div>
-      <div className="font-bold text-lg text-[hsl(234,12%,34%)]">Powered by Technology</div>
-      <div className="text-xs">
+      <div className="text-xl text-[hsl(229,6%,66%)]">
+        Reliable, efficient delivery
+      </div>
+      <div className="font-bold text-lg text-[hsl(234,12%,34%)]">
+        Powered by Technology
+      </div>
+      <div className="text-xs text-[hsl(229,6%,66%)]">
         Our Artificial Intelligence powered tools use millions of project data
         points to ensure that your project is successful
       </div>
