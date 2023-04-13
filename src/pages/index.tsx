@@ -1,11 +1,10 @@
+import Image from "next/image";
 import { TopComponent } from "../components/Card";
 import { Card } from "../components/Card";
-import {
-  Calculatorimages,
-  Karmaimages,
-  Supervisorimages,
-  TeamBuilderimages,
-} from "../components/SVGimages";
+import calImg from "@/images/icon-calculator.svg";
+import karmaImg from "@/images/icon-karma.svg";
+import supImg from "@/images/icon-supervisor.svg";
+import teamImg from "@/images/icon-team-builder.svg";
 
 {
   /* font-family: 'Poppins', sans-serif; */
@@ -14,16 +13,17 @@ import {
 export default function Home() {
   return (
     <main className=" min-h-screen flex flex-col bg-white items-center pt-8 font-poppins max-md:flex-wrap">
-      <div className="  flex flex-col bg-white  gap-4 justify-between items-center ">
+      <div className="  flex flex-col bg-white  gap-10 items-center ">
         <div>
           <TopComponent />
         </div>
-        <div className="  items-center gap-4  h-[400px]  flex justify-center max-md:flex-col">
+        <div className="  items-center gap-4    flex justify-center max-md:flex-col mb-10">
           <Card
             borderColor={"hsl(180,62%,55%)"}
             heading={"Supervisor"}
             discription={"Monitor activity to identify project roadblocks"}
-            svgImage={Supervisorimages()}
+            // svgImage={Supervisorimages()}
+            svgImage={supImg}
           />
           <div className="flex flex-col gap-4">
             <Card
@@ -32,13 +32,15 @@ export default function Home() {
               discription={
                 "Scan our talent network to create the optimal team for your project"
               }
-              svgImage={TeamBuilderimages()}
+              // svgImage={TeamBuilderimages()}
+              svgImage={teamImg}
             />
             <Card
               borderColor={"hsl(34,97%,64%)"}
               heading={"Karma"}
               discription={"Regularly evaluates our talent to ensure quality"}
-              svgImage={Karmaimages()}
+              // svgImage={Karmaimages()}
+              svgImage={karmaImg}
             />
           </div>
           <Card
@@ -47,7 +49,8 @@ export default function Home() {
             discription={
               "Uses data from past projects to provide better delivery estimates"
             }
-            svgImage={Calculatorimages()}
+            // svgImage={<Calculatorimages />}
+            svgImage={calImg}
           />
         </div>
       </div>

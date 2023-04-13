@@ -6,19 +6,20 @@ import {
   TeamBuilderimages,
 } from "./SVGimages";
 import { Interface } from "readline";
+import Image from "next/image";
 
 interface Cardtype {
   borderColor: string;
   heading: string;
   discription: string;
-  svgImage: React.ReactNode;
+  svgImage: string;
 }
 
 export function Card(props: Cardtype) {
   return (
     <div
       style={{ borderTopColor: props.borderColor }}
-      className="p-4 flex flex-col border border-t-2 gap-4 shadow-gray-400 shadow-md w-[280px] h-44 rounded-md "
+      className="p-4 flex flex-col border border-t-2 gap-6 shadow-gray-400 shadow-md w-[240px] h-40 rounded-md "
     >
       <div className=" items-start bg-white flex flex-col ">
         <p className="font-poppins font-bold text-[hsl(234,12%,34%)]">
@@ -28,7 +29,7 @@ export function Card(props: Cardtype) {
       </div>
       <div className=" w-full flex justify-end">
         <div className="flex justify-end max-w-[80px] h-auto ">
-          {props.svgImage}
+          <Image className="h-8 w-auto" src={props.svgImage} alt="cal img" />
         </div>
       </div>
     </div>
@@ -37,7 +38,7 @@ export function Card(props: Cardtype) {
 
 export function TopComponent() {
   return (
-    <div className="flex flex-col items-center justify-center text-center w-80 gap-2">
+    <div className="flex flex-col items-center justify-center text-center w-[380px] gap-2">
       <div className="text-xl text-[hsl(229,6%,66%)]">
         Reliable, efficient delivery
       </div>
