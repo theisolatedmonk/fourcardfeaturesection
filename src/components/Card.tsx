@@ -1,10 +1,4 @@
 import { ReactComponentElement } from "react";
-import {
-  Calculatorimages,
-  Karmaimages,
-  Supervisorimages,
-  TeamBuilderimages,
-} from "./SVGimages";
 import { Interface } from "readline";
 import Image from "next/image";
 
